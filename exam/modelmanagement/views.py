@@ -17,7 +17,7 @@ class RestaurantListView(APIView):
         return Response(serializer.data)
 
 
-class BooksViewSet(ViewSet):
+class RestaurantViewSet(ViewSet):
     queryset = Restaurant.objects.all()
     serializer_class = RestaurantSerializer
     permission_classes = [IsAdminUser]
