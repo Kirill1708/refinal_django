@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 from rest_framework.viewsets import ViewSet, ModelViewSet
 
 from .models import Restaurant, Dish
-from .serializers import BookSerializer, JournalSerializer
+from .serializers import RestaurantSerializer, DishSerializer
 
 
 class RestaurantListView(APIView):
