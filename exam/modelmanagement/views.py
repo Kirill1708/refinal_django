@@ -30,7 +30,7 @@ class RestaurantViewSet(ViewSet):
 
     def retrieve(self, request, pk, *args, **kwargs):
         instance = Restaurant.objects.get(id=pk)
-        serializer = BookSerializer(instance)
+        serializer = RestaurantSerializer(instance)
         return Response(serializer.data)
 
     def update(self, request, pk, *args, **kwargs):
