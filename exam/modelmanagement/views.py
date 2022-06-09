@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 from rest_framework.viewsets import ViewSet, ModelViewSet
 
 from .models import Restaurant, Dish
-from .serializers import BookSerializer, JournalSerializer
+from .serializers import RestaurantSerializer, DishSerializer
 
 
 class RestaurantListView(APIView):
@@ -17,7 +17,7 @@ class RestaurantListView(APIView):
         return Response(serializer.data)
 
 
-class BooksViewSet(ViewSet):
+class RestaurantViewSet(ViewSet):
     queryset = Restaurant.objects.all()
     serializer_class = RestaurantSerializer
     permission_classes = [IsAdminUser]
